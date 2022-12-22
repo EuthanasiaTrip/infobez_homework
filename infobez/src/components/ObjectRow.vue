@@ -130,9 +130,9 @@ export default {
 
     getSelectedRights: function () {
       let rightsArray = [];
-      if (this.isReadButtonVisible) rightsArray.push("read");
-      if (this.isWriteButtonVisible) rightsArray.push("write");
-      if (this.isGrantButtonVisible) rightsArray.push("grant");
+      if (this.readCheck) rightsArray.push("read");
+      if (this.writeCheck) rightsArray.push("write");
+      if (this.grantCheck) rightsArray.push("grant");
 
       return rightsArray;
     },

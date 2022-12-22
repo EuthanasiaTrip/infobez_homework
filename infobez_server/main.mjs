@@ -164,8 +164,8 @@ app.post("/update", (request, response) => {
 
     const index = objects.findIndex(obj => obj.name === objectName);
     if (index != -1) {
-        if (!isForceUpdate) {
-            const initialRights = objects[index].rights[userName];
+        const initialRights = objects[index].rights[userName];
+        if (!isForceUpdate) {            
             objects[index].rights[userName] = arrayUnique([...initialRights, ...rightLvls]);
         } else {
             objects[index].rights[userName] = rightLvls;
