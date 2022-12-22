@@ -12,6 +12,5 @@ app.use(vuetify)
   .mount('#app')
 
 app.config.globalProperties.currentUser = '123';
-app.$vuetify.theme.themes.light.primary = '#4caf50'
 
 

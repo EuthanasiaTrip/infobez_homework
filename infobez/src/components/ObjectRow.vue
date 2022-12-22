@@ -123,9 +123,9 @@ export default {
         rights: this.getSelectedRights(),
       };
 
-      this.clearModal();
-
-      DataService.updateRights(config);
+      DataService.updateRights(config).then(() => {
+        this.clearModal(); 
+      });     
     },
 
     getSelectedRights: function () {
